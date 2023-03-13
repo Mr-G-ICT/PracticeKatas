@@ -25,6 +25,13 @@ namespace PracticeKatas
         }
         public static long[] convertandreverse(int number)
         {
+            ////////////////////////////////////////////////////////
+            // Description: converts a number ot an array and reverses it
+            // before turning it back into a number
+            // inputs: a number
+            // outputs a reversed array of numbers
+            ///////////////////////////////////////////////////////
+
             char[] numtoWords = number.ToString().ToCharArray();
             long[] result = new long[numtoWords.Length];
 
