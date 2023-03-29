@@ -9,7 +9,7 @@ namespace PracticeKatas
     {
         static void Main(string[] args)
         {
-          //  Console.WriteLine(UniqueInOrder("AAAABBBCCDAABBB"));
+            //  Console.WriteLine(UniqueInOrder("AAAABBBCCDAABBB"));
             Console.WriteLine(addingBigNumbers("123456789", "987654322"));
             Console.WriteLine(MultiplesOfThreeAndFive(10));
             Console.WriteLine(dubStepDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"));
@@ -22,7 +22,36 @@ namespace PracticeKatas
             Console.WriteLine(binaries("10111213"));
             Console.WriteLine(movingZeros(new int[] { 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 }));
             Console.WriteLine(convertandreverse(12345));
+            Console.WriteLine(findUniqueNumber(new int[] { 1, 2, 2, 2 }));
         }
+        public static int findUniqueNumber(int[] numbers)
+        {
+            int num = 0;
+            int count = 0;
+            // given an array of numbers find the unique one
+            foreach (int value in numbers)
+            {
+                num = value;
+                foreach (int Second in numbers)
+                {
+                    if (num == Second)
+                    {
+                        count++;
+                    }
+                }
+                if (count == 1)
+                {
+                    break;
+                }
+                else
+                {
+                    count = 0;
+                }
+            }
+            return num;
+        }
+
+
         public static long[] convertandreverse(int number)
         {
             ////////////////////////////////////////////////////////
